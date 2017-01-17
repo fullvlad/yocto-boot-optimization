@@ -954,7 +954,7 @@ class BaseConfig(object):
 
     def start_qemu(self):
         if self.kernel:
-            kernel_opts = "-kernel %s -append '%s %s %s'" % (self.kernel, self.kernel_cmdline, self.kernel_cmdline_script, self.get('QB_KERNEL_CMDLINE_APPEND'))
+            kernel_opts = "-kernel %s -append '%s %s %s '" % (self.kernel, self.kernel_cmdline, self.kernel_cmdline_script, self.get('QB_KERNEL_CMDLINE_APPEND'))
             if self.dtb:
                 kernel_opts += " -dtb %s" % self.dtb
         else:
